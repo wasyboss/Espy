@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_300sdp" />
+    <LinearLayout
+        android:id="@+id/ratings_reviews_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ratings_layout"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ratings_reviews"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ratings_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratings_reviews_layout"
+        app:layout_constraintLeft_toLeftOf="@id/guideline_ratings"
+        app:layout_constraintEnd_toStartOf="@id/progress_bar"
+        app:layout_constraintHorizontal_weight=".40">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rating_text_view"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ratings_text"
+            android:textSize="@dimen/_42ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_ratings"
+            >
+
+        </com.google.android.material.textview.MaterialTextView>
+        <LinearLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_ratings"
+            >
+            <RatingBar
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4.5"
+                android:max="5"
+                android:stepSize=".5"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:progressTint="@color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_ratings"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_59"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight=".60"
+        app:layout_constraintStart_toEndOf="@+id/ratings_layout"
+        app:layout_constraintTop_toBottomOf="@id/ratings_reviews_layout">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_150sdp" />
+
+        <LinearLayout
+            android:id="@+id/progress_five"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_progress"
+            >
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_progress"
+                app:layout_constraintLeft_toRightOf="@id/guideline_progress"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <ProgressBar
+                android:id="@+id/determinate_bar_five"
+                style="@style/RatingsProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/_10sdp"
+                android:minHeight="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:progress="75"
+                android:progressDrawable="@drawable/progress_limit"
+                android:theme="@style/RatingsProgressBar"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progress_four"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progress_five"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_progress"
+                app:layout_constraintLeft_toRightOf="@id/guideline_progress"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+            <ProgressBar
+                android:id="@+id/determinate_bar_four"
+                style="@style/RatingsProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/_10sdp"
+                android:minHeight="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:progress="35"
+                android:progressDrawable="@drawable/progress_limit"
+                android:theme="@style/RatingsProgressBar"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progress_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progress_four"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_progress"
+                app:layout_constraintLeft_toRightOf="@id/guideline_progress"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+            <ProgressBar
+                android:id="@+id/determinate_bar_three"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/_10sdp"
+                android:minHeight="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:progress="25"
+                android:progressDrawable="@drawable/progress_limit"
+                android:theme="@style/RatingsProgressBar"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/progress_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progress_three"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_progress"
+                app:layout_constraintLeft_toRightOf="@id/guideline_progress"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+            <ProgressBar
+                android:id="@+id/determinate_bar_two"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/_10sdp"
+                android:minHeight="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:progress="15"
+                android:progressDrawable="@drawable/progress_limit"
+                android:theme="@style/RatingsProgressBar"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/progress_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/progress_two"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_progress"
+                app:layout_constraintLeft_toRightOf="@id/guideline_progress"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+            <ProgressBar
+                android:id="@+id/determinate_bar_one"
+                style="@style/RatingsProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/_10sdp"
+                android:minHeight="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:progress="10"
+                android:progressDrawable="@drawable/progress_limit"
+                android:theme="@style/RatingsProgressBar"
+                />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

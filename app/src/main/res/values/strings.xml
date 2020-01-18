@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Espy</string>
+
+    <string name="login">Login</string>
+    <string name="login_userphone_hint">Mobile Number</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_signup_hint">New User? Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <string name="ratings_reviews">Ratings and reviews</string>
+    <string name="ratings_text">4.5</string>
+    <string name="text_59">59,214</string>
+
+    <string name="description">New York City comprises 5 boroughs sitting where the Hudson River meets
+        the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s
+        major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the
+        Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</string>
+</resources>
