@@ -5,7 +5,8 @@ object CaffeList {
         val imageList = ArrayList<Caffes>()
         imageList.clear()
         imageList.add(
-            Caffes()
+            Caffes("https://i.ibb.co/NYS5LGk/bergerology1.jpg",
+                "Bergerology")
         )
         return imageList
     }
