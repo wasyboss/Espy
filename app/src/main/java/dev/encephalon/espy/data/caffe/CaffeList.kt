@@ -1,5 +1,7 @@
 package dev.encephalon.espy.data.caffe
 
+
+
 object CaffeList {
     fun getList(): List<Caffes>{
         val imageList = ArrayList<Caffes>()
