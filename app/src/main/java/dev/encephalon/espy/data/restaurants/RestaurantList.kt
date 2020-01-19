@@ -60,6 +60,32 @@ object RestaurantList {
                 "Khanas"
             )
         )
+        imageList.add(
+            Restaurants(
+                "https://i.ibb.co/0J84rbm/87be287e-d48c-c340-705a-08d2078346a0-720x430.jpg",
+                "American burger"
+            )
+        )
+        imageList.add(
+            Restaurants(
+                "https://i.ibb.co/WcVLR0W/14712638-903229323143583-6147636951656339038-o.jpg",
+                "Nanu's Food Factory"
+            )
+        )
+        imageList.add(
+            Restaurants(
+                "https://i.ibb.co/D8V21s2/london-june-20-2015-nandos-260nw-314715533-jpg.png",
+                "Nando's"
+            )
+        )
+        imageList.add(
+            Restaurants(
+                "https://i.ibb.co/8jFQvCh/0a5ef373-1268-c3af-054b-08d1df522224-medium.jpg",
+                "Choi jhal"
+            )
+        )
+
+
 
 
         return imageList
