@@ -47,6 +47,7 @@ class RecyclerViewAdapter(private val imageList: ArrayList<Restaurants>, private
             intent.setClass(holder.itemView.context, SingleItemActivity::class.java)
             intent.putExtra("name", imageList[position].name)
             intent.putExtra("url", imageList[position].url)
+            intent.putExtra("description",imageList[position].description)
             holder.itemView.context.startActivity(intent)
             //mDashboardAdapterClickListener?.onDashboardItemClicked( holder.itemName.text.toString() )
         }
