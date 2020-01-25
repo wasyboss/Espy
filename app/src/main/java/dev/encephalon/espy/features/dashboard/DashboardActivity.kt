@@ -51,11 +51,12 @@ class DashboardActivity : BaseActivity(), DashboardAdapterClickListener {
 
     }
 
-    override fun onDashboardItemClicked(name: String?,description: String?) {
+    override fun onDashboardItemClicked(name: String?,description: String?,url: String?) {
         val intent = Intent()
         intent.setClass(this@DashboardActivity, SingleItemActivity::class.java)
         intent.putExtra("name", name)
         intent.putExtra("description", description)
+        intent.putExtra("url", url)
         startActivity(intent)
     }
 }
